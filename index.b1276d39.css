@@ -27,6 +27,7 @@
   cursor: pointer;
   border-radius: 10px;
   padding: 10px 10px 16px;
+  transition: transform 1s;
 }
 
 .people .person .photo {
@@ -58,7 +59,10 @@
 }
 
 .people .person:hover {
+  z-index: 1;
   background-color: #eee;
+  position: relative;
+  transform: scale(1.2);
 }
 
 .people .person:hover .extra {
@@ -67,7 +71,6 @@
 
 .people .person:hover img {
   border-radius: 60px;
-  transform: scale(1.05);
 }
 
 .people .details .name {
