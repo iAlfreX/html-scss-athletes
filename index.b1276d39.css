@@ -1,0 +1,88 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+:root {
+  font: 16px / 18.4px Arial, Helvetica, sans-serif;
+}
+
+.people {
+  --columns: 2;
+  grid-template-columns: repeat(var(--columns), 200px);
+  justify-content: center;
+  justify-items: center;
+  column-gap: 30px;
+  display: grid;
+}
+
+@media (width >= 1000px) {
+  .people {
+    --columns: 4;
+  }
+}
+
+.people .person {
+  cursor: pointer;
+  border-radius: 10px;
+  padding: 10px 10px 16px;
+}
+
+.people .person .photo {
+  width: 200px;
+  height: 200px;
+  margin-bottom: 8px;
+  position: relative;
+}
+
+.people .person .photo img {
+  border-radius: 50%;
+  width: 100%;
+  transition: transform 1s, border-radius 1s;
+}
+
+.people .person .photo .rank {
+  color: #8b0000;
+  background-color: #fff;
+  border-radius: 50%;
+  justify-content: center;
+  align-items: center;
+  width: 32px;
+  height: 32px;
+  display: flex;
+  position: absolute;
+  top: 50%;
+  right: 10px;
+  transform: translateY(-50%);
+}
+
+.people .person:hover {
+  background-color: #eee;
+}
+
+.people .person:hover .extra {
+  visibility: visible;
+}
+
+.people .person:hover img {
+  border-radius: 60px;
+  transform: scale(1.05);
+}
+
+.people .details .name {
+  text-align: center;
+  color: #2f4f4f;
+  margin-bottom: 11px;
+  font-size: 20px;
+  line-height: 23px;
+  display: block;
+}
+
+.people .details .extra {
+  visibility: hidden;
+  text-align: center;
+  font-size: 18px;
+  line-height: 20.7px;
+}
+/*# sourceMappingURL=index.b1276d39.css.map */
